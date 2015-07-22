@@ -1,30 +1,27 @@
 /* the shape style */
 
 #talkbubble {
-   margin: 0;
-   padding: 0;
    width: 150px;
    height: 70px;
-   background: tomato;
-   position: relative;
    padding: 12px 10px;
+   background: tomato;
+   position: absolute;
+   left: 920px;
+   top: 170px;
    line-height: 25px;
-   text-align: center;
    color: white;
-   /*text-transform: uppercase;*/
+   text-align: center;
    font-family: 'Roboto', sans-serif;
    font-weight: 100;
    font-size: 1.6em;
    -moz-border-radius:    5px;
    -webkit-border-radius: 5px;
    border-radius:         5px;
-
    -webkit-user-select: none;
    select: none;
-   left: 920px;
-   top: 170px;
    box-shadow: 4px 5px 5px #888;
 }
+
 #talkbubble:before {
    content:"";
    position: absolute;
@@ -36,3 +33,5 @@
    border-right: 26px solid tomato;
    border-bottom: 13px solid transparent;
 }
+
+
