@@ -6,14 +6,22 @@
   font: bold 14px Arial, sans-serif;
 }
 
+body {
+  background: #61EDB8;
+}
+
 #calculator {
   width: 325px;
   margin: 100px auto;
   padding: 20px 20px 9px;
-  background: linear-gradient(#9dd2ea, #8bceec);
+  background: linear-gradient(#F07012, #F08D12);
  /* background: linear-gradient(to bottom, #4c4c4c 0%,#595959 18%,#666666 31%,#2c2c2c 55%,#1c1c1c 91%,#131313 100%);*/
   border-radius: 5px;
-  box-shadow: 0 7px #009de4, 0px 10px 15px rgba(0,0,0,0.6);
+  box-shadow: 0 7px #CC780F, 0px 10px 15px rgba(0,0,0,0.6);
+}
+
+#calculator span {
+  font-size: 3em;
 }
 
 .top,
@@ -49,13 +57,13 @@
   /* position:relative; so you can change the status on :active */
   position: relative;
   width: 66px;
-  height: 36px;
+  height: 76px;
   background: white;
   border-radius: 3px;
   box-shadow: 0px 5px rgba(0,0,0,0.2);
   margin: 0 7px 11px 0;
   color: #888;
-  line-height: 38px;
+  line-height: 75px;
   /* make the keys look like a button */
   cursor: pointer;
   /* prevent selection of text inside keys */
@@ -67,7 +75,8 @@
 
 /* style different type of keys  =/+/÷/x */
 .keys span.operator {
-  background: #FFF0F5;
+  background: #4CE3D9;
+  color: white;
   margin-left: 0;
 }
 
@@ -77,8 +86,8 @@
 }
 
 .top span.clear {
-  background: #ff9fa8;
-  box-shadow: 0px 5px #ff7c87;
+  background: #3D5254;
+  box-shadow: 0px 5px #557375;
   color: white;
 }
 
@@ -116,9 +125,6 @@
   top: 4px;
   box-shadow: 0px 0px #d3545d;
 }
-
-
-
 
 /* remove the margin from the operator keys */
 span.operator {
