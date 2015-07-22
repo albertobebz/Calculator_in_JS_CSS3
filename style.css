@@ -1,0 +1,14 @@
+/*** BASIC RESET ***/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#calculator {
+  border: 1px solid black;
+  padding: 20px;
+  width: 325px;
+  margin: 100px auto;
+  height: auto;
+}
