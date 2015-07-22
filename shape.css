@@ -1,0 +1,32 @@
+/* the shape style */
+
+#talkbubble {
+   margin: 0;
+   padding: 0;
+   width: 120px;
+   height: 80px;
+   background: tomato;
+   position: relative;
+   padding: 20px 10px;
+   text-align: center;
+   color: white;
+   text-transform: uppercase;
+   font-size: 1.3em;
+   -moz-border-radius:    5px;
+   -webkit-border-radius: 5px;
+   border-radius:         5px;
+   left: 920px;
+   top: 190px;
+   box-shadow: 4px 5px 5px #888;
+}
+#talkbubble:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid tomato;
+   border-bottom: 13px solid transparent;
+}

@@ -20,6 +20,7 @@ body {
   box-shadow: 0 7px #CC780F, 0px 10px 15px rgba(0,0,0,0.6);
 }
 
+/* change the font size of the button */
 #calculator span {
   font-size: 3em;
 }
