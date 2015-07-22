@@ -52,6 +52,46 @@
   user-select: none;
 }
 
+/* style different type of keys  =/+/÷/x */
+.keys span.operator {
+  background: #FFF0F5;
+  margin-left: 0;
+}
+
+.keys span.eval {
+  background: #f1ff92;
+  box-shadow: 0px 4px #9da853;
+}
+
+.top span.clear {
+  background: #ff9fa8;
+  box-shadow: 0px 5px #ff7c87;
+  color: white;
+}
+
+/* hover effects */
+.keys span:hover {
+  background: #9c89f6;
+  box-shadow: 0px 4px #6b54d3;
+  color: white;
+}
+
+.keys span.eval:hover {
+  background: #abb850;
+  box-shadow: 0px 4px #717a3;
+  color: #ffffff;
+}
+
+.top span.clear:hover {
+  background: #f68991;
+  box-shadow: 0px 4px #d3545d;
+  color: white;
+}
+
+
+
+
+
 /* remove the margin from the operator keys */
 span.operator {
   margin-right: 0;
