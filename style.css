@@ -47,6 +47,9 @@
   line-height: 38px;
   /* make the keys look like a button */
   cursor: pointer;
+  /* prevent selection of text inside keys */
+  -webkit-user-select: none; 
+  user-select: none;
 }
 
 /* remove the margin from the operator keys */
