@@ -15,12 +15,24 @@
   border-radius: 5px;
 }
 
+.top,
 .keys {
   text-align: center;
   /*technique to clear floats elem*/
   overflow: hidden;
 }
 
+/* top portion */
+.top .screen {
+  height: 40px;
+  width: 212px;
+  float: right;
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+
+.top span.clear,
 .keys span {
   float: left;
   width: 66px;
