@@ -30,6 +30,7 @@
   float: right;
   background: rgba(0,0,0,0.2);
   border-radius: 3px;
+  box-shadow: inset 3px 4px rgba(0,0,0,0.2);
 }
 
 
