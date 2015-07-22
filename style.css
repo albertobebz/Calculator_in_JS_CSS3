@@ -13,6 +13,7 @@
   background: linear-gradient(#9dd2ea, #8bceec);
  /* background: linear-gradient(to bottom, #4c4c4c 0%,#595959 18%,#666666 31%,#2c2c2c 55%,#1c1c1c 91%,#131313 100%);*/
   border-radius: 5px;
+  box-shadow: 0 7px #009de4;
 }
 
 .top,
