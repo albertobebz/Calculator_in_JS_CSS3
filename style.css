@@ -100,8 +100,8 @@ body {
 }
 
 .keys span.eval:hover {
-  background: #abb850;
-  box-shadow: 0px 4px #717a3;
+  background: tomato;
+  box-shadow: 0px 4px red;
   color: #ffffff;
 }
 
