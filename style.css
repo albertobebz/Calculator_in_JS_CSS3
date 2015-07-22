@@ -7,13 +7,22 @@
 
 #calculator {
   border: 1px solid black;
-  
   width: 325px;
-  height: auto;
-
   margin: 100px auto;
   padding: 20px;
-
-  background: linear-gradient(to bottom, #4c4c4c 0%,#595959 18%,#666666 31%,#2c2c2c 55%,#1c1c1c 91%,#131313 100%);
+  background: linear-gradient(#9dd2ea, #8bceec);
+ /* background: linear-gradient(to bottom, #4c4c4c 0%,#595959 18%,#666666 31%,#2c2c2c 55%,#1c1c1c 91%,#131313 100%);*/
   border-radius: 5px;
+}
+
+/*** technique to clear floats elements ***/
+.keys {
+  overflow: hidden;
+}
+
+
+.keys span {
+  float: left;
+  width: 66px;
+  height: 36px;
 }
