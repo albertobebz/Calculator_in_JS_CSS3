@@ -1,33 +1,88 @@
-// get all the keys button
+// Get all the keys from document
 var keys = document.querySelectorAll('#calculator span');
 
-// add the onclik event to all the keys and perform operations
+// set an array that contains all the possible operators
+var operators = ['+', '-', 'x', '÷'];
 
-for(var i=0; i<keys.lenght; i++){
-  keys[i].onclick = function(e){
-    // get the input and button values
+
+var decimalAdded = false;
+
+// Add onclick event to all the keys and perform operations
+for(var i = 0; i < keys.length; i++) {
+  keys[i].onclick = function(e) {
+    // Get the input and button values
     var input = document.querySelector('.screen');
-    // gets the value of the screen
+    // strore the value of the screen in a variable (inputVal)
     var inputVal = input.innerHTML;
-    // gets the value of the clicked button
+    // gets the keys that has been ckicked and store it in btnVal (es. 7/8/+/C etc etc)
     var btnVal = this.innerHTML;
-
-// now append the key values (btnVal) to the input string and use js's eval function to get the result
-    // if clear key is pressed, erase everything
-    if (btnVal==='C') {
-      input.innerHTML= '';
-    };
-
-    // if eval key is pressed, calculate and display the result
-    if (btnVal==='=') {
+    
+    // Now, just append the key values (btnValue) to the input string and finally use javascript's eval function to get the result
+    // If clear key is pressed, erase everything
+    if(btnVal === 'C') {
+      input.innerHTML = '';
+      decimalAdded = false;
+    }
+    
+    // If eval key is pressed (=), calculate and display the result
+    else if(btnVal === '=') {
       var equation = inputVal;
-    };
-
-    // replace x and ÷ with * and / respectively. This can be achived using regex and the 'g' tag which will replace all istances of the matched character/substring
-
+      var lastChar = equation[equation.length - 1];
+      
+      // Replace all instances of x and ÷ with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
+      equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+      
+      // Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
+      if(operators.indexOf(lastChar) > -1 || lastChar == '.'){
+        equation = equation.replace(/.$/, '');
+      }
+      
+      if(equation){
+        input.innerHTML = eval(equation);
+      }
+        
+      decimalAdded = false;
+    }
+    
+    // indexOf works only in IE9+
+    else if(operators.indexOf(btnVal) > -1) {
+      // Operator is clicked
+      // Get the last character from the equation
+      var lastChar = inputVal[inputVal.length - 1];
+      
+      // Only add operator if input is not empty && there is no operator at the last
+      if(inputVal != '' && operators.indexOf(lastChar) == -1){
+        input.innerHTML += btnVal;
+      }
+      
+      // Allow minus if the string is empty
+      else if(inputVal == '' && btnVal == '-'){
+        input.innerHTML += btnVal;
+      }
+      
+      // Replace the last operator (if exists) with the newly pressed operator
+      if(operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+        // Here, '.' matches any character while $ denotes the end of string, so anything (will be an operator in this case) at the end of string will get replaced by new operator
+        input.innerHTML = inputVal.replace(/.$/, btnVal);
+      }
+      
+      decimalAdded =false;
+    }
+    
+    // Here it's how we can resolve the decimal problem. It will be reset when an operator, eval or clear key is pressed.
+    else if(btnVal == '.') {
+      if(!decimalAdded) {
+        input.innerHTML += btnVal;
+        decimalAdded = true;
+      }
+    }
+    
     // if any other key is pressed, just append it
-    else{
+    else {
       input.innerHTML += btnVal;
     }
-  }
+    
+    // prevent page jumps
+    e.preventDefault();
+  } 
 }
