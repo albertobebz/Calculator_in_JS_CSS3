@@ -20,8 +20,10 @@ for(var i=0; i<keys.lenght; i++){
 
     // if eval key is pressed, calculate and display the result
     if (btnVal==='=') {
-      var equation = input
+      var equation = inputVal;
     };
+
+    // replace x and ÷ with * and / respectively. This can be achived using regex and the 'g' tag which will replace all istances of the matched character/substring
 
     // if any other key is pressed, just append it
     else{
